@@ -339,36 +339,10 @@ h5 {
 
 
 
-.grid-item {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 8px;
-  width: 75%;
-  height: auto; /* change to auto so image+button fit inside */
-  padding: 10px;
-}
 
-.item-img {
-  width: 60%;
 
-  border: 1px solid;
-  /* max-width: 120px; optional */
-  border-radius: 40%;
-}
 
-.item-btn {
-  margin-top: 10px;
-  /* padding: 8px 15px; */
-  border: 1px solid;
-  width: 50%;
-  border-radius: 6px;
-  background: #ff0000f5;
-  color : White;
-  cursor: pointer;
-  font-weight: bold;
-}
+
 
 #modalholder {
   display: grid;
@@ -377,35 +351,82 @@ h5 {
 
 
 
+
+
+
 .simple-card {
-  width: 150px;
-  height: 40px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 5px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 200px; /* small width */
+  font-size: 12px;
+  margin-top : 3px;
+  border : 1px solid;
 }
 
-.simple-pic {
+.pic {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  float: left;
-  margin-right: 5px;
 }
 
-.simple-name {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-  text-align: center;
+.name {
+  flex: 1;
+  margin: 0 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.confirm-btn {
-  border : none;
-  padding : 0;
-  border-radius: 4px;
-  margin-left: 50px;
-  font-size: 14px;
+.confirm {
+  background: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+
+
+
+
+
+.mini-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 4px;
+  background: #fff;
+}
+
+.mini-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.mini-name {
+  flex: 1;
+  margin: 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-delete {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 6px;
   cursor: pointer;
 }
 
@@ -415,13 +436,10 @@ h5 {
 
 
 
+h4 {
 
-
-
-
-
-
-
+  color: white;
+}
 
 
 
@@ -429,9 +447,11 @@ h5 {
 
 .leftplaces {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-  padding: 20px;
+  grid-template-columns: 50% 50% ;
+  /* gap: 5px; */
+  padding: 5px;
+ 
+
 }
 
 
