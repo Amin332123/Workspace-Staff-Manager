@@ -17,6 +17,7 @@
   </header> -->
   
   <main>
+
 <div class="cont" id="cont">
   <aside class="sidebar" id="sideBar">
     
@@ -24,6 +25,9 @@
   <div class="modal-content">
     <button class="close-btn" id="closebtn">×</button>
     <h5>Add Profile</h5>
+    <div id="imgcontainer">
+      
+    </div>
     <input type="text" placeholder="Full Name" class="modal-input" id="fullname" />
     
     <select class="modal-input" id="Role" required>
@@ -36,15 +40,23 @@
     </select>
 
     <input type="url" placeholder="Image URL" class="modal-input" id="imgurl" />
-    <div id="cardofexperience" class="cardofexperience"></div>
+    <input type="email" placeholder="Email" class="modal-input" id="email" />
+    <input type="tel" placeholder="Phone Number" class="modal-input" id="phone" />
+    
+    <h4 style="color: black; margin : 0;">Experience : </h4>
     <div class="experience-box">
-      
+      <div class="sansExperience">
+        <input type="checkbox" name="checkbox" >
+      <label for="checkbox">Sans Experience </label>
+      </div>
+
       <input type="text" placeholder="Company Name" id="companyname" />
       <input type="text" placeholder="Role"  id="roleExperience"/>
       <input type="date"  id="startdate"/>
       <input type="date" id="enddate"/>
       <button id="AjouterNovelExperiece">Ajouter Nouvel Experience</button>
     </div>
+    <div id="cardofexperience" class="cardofexperience"></div>
 
     <button class="modal-btn" id="SaveEmployee">Save</button>
   </div>
@@ -81,6 +93,9 @@
   <div class="box">
     <input type="text" placeholder="Nom de Employee" class="input-search" id="inputSearch" />
     <button id="closesearchmodal">×</button>
+    <div id="modalholder"></div>
+
+
   </div>
 </div>
 
@@ -88,28 +103,61 @@
 <div class="div1">
   <h5>Salle de conférence</h5>
   <button class="ajouterdanslessalle" > + </button>
+    <div class="leftplaces">
+  
+    <div class="grid-item">
+    
+      <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQB8ivx4QwwAFC2DDeNITJMqx1ZLds_rZgOur8DWQtVPmj0BjAWq_IWWuSmzbI2xaN-Us24CvG2T9bbrAIBIDbdMShVNMG0EFH3fI7XdVs_6y625yciGWT6MMroJTaEZOqJhk5nWCGOCZ0&s=19" alt="image" class="item-img">
+    <button class="item-btn">X</button>
+  
+</div>
 
+  
+  <!-- <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div> -->
+  </div>
 
 </div>
 <div class="div2">
   <h5>Réception</h5>
   <button class="ajouterdanslessalle" > + </button>
+    <div class="leftplaces" id="centergrid">
+  <div class="grid-item">1kbngb</div>
+  <div class="grid-item"> <img src="" alt=""></div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">3</div>
+  
+  
+  </div>
+
 </div>
 <div class="div3">
   <h5>Salle des serveurs</h5>
-  <button class="ajouterdanslessalle"> + </button>
+  <button class="ajouterdanslessalle" id="Salle des serveurs"> + </button>
+  <div class="leftplaces">
+
+  </div>
 </div>
 <div class="div4">
   <h5>Salle de sécurité</h5>
-  <button class="ajouterdanslessalle"> + </button>
+  <button class="ajouterdanslessalle" id="Salle de sécurité"> + </button>
+  <div class="leftplaces"></div>
 </div>
 <div class="div5">
   <h5>Salle du personnel</h5>
-  <button class="ajouterdanslessalle"> + </button>
+  <button class="ajouterdanslessalle" id="Salle du personnel"> + </button>
+  <div class="leftplaces"></div>
 </div>
 <div class="div6">
   <h5>Salle d’archives </h5>
-  <button class="ajouterdanslessalle"> + </button>
+  <button class="ajouterdanslessalle" id="Salle d’archives"> + </button>
+  <div class="leftplaces"></div>
 </div>
 
      </section>
