@@ -536,8 +536,9 @@ h4 {
 
 
 #lesexperiencedetails {
-  max-height: 200px; /* or any height you prefer */
+  max-height: 200px; 
   overflow-y: auto;
-  padding-right: 10px; /* optional: avoids scrollbar overlap */
+  padding-right: 10px;
+  list-style-type: none; /* optional: avoids scrollbar overlap */
 }
 
