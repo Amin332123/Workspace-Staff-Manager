@@ -1,4 +1,3 @@
-// 🔝 VARIABLES
 const showside = document.getElementById("show-side");
 const hideside = document.getElementById("hideside");
 const sideBar = document.getElementById("sideBar");
@@ -49,12 +48,18 @@ const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/([0-9]{4})$/;
 let ExperienceArray = [];
 
 let unsnighedCards = [
-
   {
     name: "Alice",
     role: "Manager",
     img: "alice.jpg",
-    experience: [{ company: "TechCorp", roleE: "React Developer" }],
+    experience: [
+      {
+        company: "TechCorp",
+        roleE: "React Developer",
+        startDate: "12-03-2022",
+        enddate: "28-07-2023",
+      },
+    ],
     id: Date.now() + 3456,
     email: "alice@techcorp.com",
     phone: "+1-555-0101",
@@ -63,7 +68,14 @@ let unsnighedCards = [
     name: "Bob",
     role: "Nettoyage",
     img: "bob.jpg",
-    experience: [{ company: "CodeBase", roleE: "Node.js Engineer" }],
+    experience: [
+      {
+        company: "CodeBase",
+        roleE: "Node.js Engineer",
+        startDate: "05-01-2021",
+        enddate: "19-11-2022",
+      },
+    ],
     id: Date.now() + 2345678,
     email: "bob@codebase.io",
     phone: "+1-555-0102",
@@ -72,7 +84,14 @@ let unsnighedCards = [
     name: "Charlie",
     role: "Techniciens IT",
     img: "charlie.jpg",
-    experience: [{ company: "DevWorks", roleE: "MERN Stack Dev" }],
+    experience: [
+      {
+        company: "DevWorks",
+        roleE: "MERN Stack Dev",
+        startDate: "17-06-2020",
+        enddate: "03-03-2022",
+      },
+    ],
     id: Date.now() + 3754,
     email: "charlie@devworks.dev",
     phone: "+1-555-0103",
@@ -81,7 +100,14 @@ let unsnighedCards = [
     name: "Diana",
     role: "sécurité",
     img: "diana.jpg",
-    experience: [{ company: "Designify", roleE: "Product Designer" }],
+    experience: [
+      {
+        company: "Designify",
+        roleE: "Product Designer",
+        startDate: "09-09-2021",
+        enddate: "14-02-2023",
+      },
+    ],
     id: Date.now() + 345654,
     email: "diana@designify.co",
     phone: "+1-555-0104",
@@ -90,7 +116,14 @@ let unsnighedCards = [
     name: "Ethan",
     role: "Autre",
     img: "ethan.jpg",
-    experience: [{ company: "BugSquashers", roleE: "Test Automation Lead" }],
+    experience: [
+      {
+        company: "BugSquashers",
+        roleE: "Test Automation Lead",
+        startDate: "22-04-2019",
+        enddate: "30-10-2020",
+      },
+    ],
     id: Date.now() + 346754,
     email: "ethan@bugsquashers.io",
     phone: "+1-555-0105",
@@ -99,7 +132,14 @@ let unsnighedCards = [
     name: "Fiona",
     role: "Réceptionnist",
     img: "fiona.jpg",
-    experience: [{ company: "AgileFlow", roleE: "Scrum Master" }],
+    experience: [
+      {
+        company: "AgileFlow",
+        roleE: "Scrum Master",
+        startDate: "11-01-2020",
+        enddate: "25-06-2021",
+      },
+    ],
     id: Date.now() + 34562,
     email: "fiona@agileflow.org",
     phone: "+1-555-0106",
@@ -108,7 +148,14 @@ let unsnighedCards = [
     name: "George",
     role: "Manager",
     img: "george.jpg",
-    experience: [{ company: "CloudOps", roleE: "CI/CD Specialist" }],
+    experience: [
+      {
+        company: "CloudOps",
+        roleE: "CI/CD Specialist",
+        startDate: "03-05-2022",
+        enddate: "18-09-2023",
+      },
+    ],
     id: Date.now() + 34345,
     email: "george@cloudops.net",
     phone: "+1-555-0107",
@@ -117,7 +164,14 @@ let unsnighedCards = [
     name: "Hannah",
     role: "Techniciens IT",
     img: "hannah.jpg",
-    experience: [{ company: "SecureNet", roleE: "Penetration Tester" }],
+    experience: [
+      {
+        company: "SecureNet",
+        roleE: "Penetration Tester",
+        startDate: "27-08-2020",
+        enddate: "10-12-2021",
+      },
+    ],
     id: Date.now() + 33,
     email: "hannah@securenet.org",
     phone: "+1-555-0108",
@@ -126,7 +180,14 @@ let unsnighedCards = [
     name: "Ian",
     role: "sécurité",
     img: "ian.jpg",
-    experience: [{ company: "DataDive", roleE: "ML Engineer" }],
+    experience: [
+      {
+        company: "DataDive",
+        roleE: "ML Engineer",
+        startDate: "06-02-2021",
+        enddate: "29-11-2022",
+      },
+    ],
     id: Date.now() + 342,
     email: "ian@datadive.ai",
     phone: "+1-555-0109",
@@ -135,20 +196,57 @@ let unsnighedCards = [
     name: "Julia",
     role: "Autre",
     img: "julia.jpg",
-    experience: [{ company: "NeuroTech", roleE: "NLP Specialist" }],
+    experience: [
+      {
+        company: "NeuroTech",
+        roleE: "NLP Specialist",
+        startDate: "15-07-2019",
+        enddate: "04-01-2021",
+      },
+    ],
     id: Date.now() + 345,
     email: "julia@neurotech.ai",
     phone: "+1-555-0110",
-  }
-
+  },
+  {
+    name: "Karim",
+    role: "Autre",
+    img: "karim.jpg",
+    experience: [
+      {
+        company: "WebForge",
+        roleE: "Frontend Developer",
+        startDate: "10-02-2018",
+        enddate: "15-06-2019",
+      },
+      {
+        company: "CodeNest",
+        roleE: "Backend Engineer",
+        startDate: "01-07-2019",
+        enddate: "30-11-2020",
+      },
+      {
+        company: "AppVision",
+        roleE: "Full Stack Engineer",
+        startDate: "05-01-2021",
+        enddate: "20-08-2022",
+      },
+      {
+        company: "DevSphere",
+        roleE: "Tech Lead",
+        startDate: "01-09-2022",
+        enddate: "10-11-2023",
+      },
+    ],
+    id: Date.now() + 987654,
+    email: "karim@devsphere.io",
+    phone: "+1-555-0111",
+  },
 ];
 
 afficherlescard();
 
-// conferenceCard.addEventListener("click" , (e) => {
-
-// })
-var cardsContainerInsideZone
+var cardsContainerInsideZone;
 searchInput.addEventListener("input", () => {
   if (searchInput.value !== "") {
     showunshinedemployees(searchInput.value);
@@ -160,7 +258,7 @@ searchInput.addEventListener("input", () => {
 butotonDeAjouterdanslessalle.forEach((button) => {
   button.addEventListener("click", () => {
     buttonsearchchecker = button.id;
-    cardsContainerInsideZone = button
+    cardsContainerInsideZone = button;
     showSearchModal();
   });
 });
@@ -173,7 +271,6 @@ experienceContainer.addEventListener("click", function (e) {
     remooveexperience(e.target);
   }
 });
-
 hideside.addEventListener("click", hideSideBar);
 showside.addEventListener("click", showSideBar);
 ajouteButton.addEventListener("click", showModal);
@@ -185,64 +282,72 @@ imgUrl.addEventListener("input", () => {
 });
 
 searchDivContainer.addEventListener("click", (e) => {
-  addemployeetoacard(e.target );
+  addemployeetoacard(e.target);
 });
-var i = 0;
 function addemployeetoacard(targetButton) {
   if (targetButton.className == "confirm") {
     unsnighedCards.forEach((employee) => {
-      if (employee.id == targetButton.id ) {
-        if((buttonsearchchecker =="id1" || buttonsearchchecker =="id5") && i < 8  ) {
-             cardsContainerInsideZone.parentElement.innerHTML += createcardtoputinsignedcards(employee);
-             removemodalandaddemployeetothezone(employee)
-            
-             return  
+      if (employee.id == targetButton.id) {
+        if (buttonsearchchecker == "id1" || buttonsearchchecker == "id5") {
+          cardsContainerInsideZone.parentElement.innerHTML +=
+            createcardtoputinsignedcards(employee);
+          removemodalandaddemployeetothezone(employee);
+
+          return;
         }
-        if ((employee.role == "Réceptionnist" || employee.role == "Nettoyage" || employee.role == "Manager") && buttonsearchchecker == "id2" ) {
+        if (
+          (employee.role == "Réceptionnist" ||
+            employee.role == "Nettoyage" ||
+            employee.role == "Manager") &&
+          buttonsearchchecker == "id2"
+        ) {
           receptioncard.innerHTML += createcardtoputinsignedcards(employee);
-          removemodalandaddemployeetothezone(employee)
-          receptionNombre.innerText += 1 
-          
-          return 
+          removemodalandaddemployeetothezone(employee);
+          receptionNombre.innerText += 1;
+
+          return;
         }
-        if((employee.role == "Techniciens IT" || employee.role == "Nettoyage" ||   employee.role == "Manager")  && buttonsearchchecker == "id3") {
+        if (
+          (employee.role == "Techniciens IT" ||
+            employee.role == "Nettoyage" ||
+            employee.role == "Manager") &&
+          buttonsearchchecker == "id3"
+        ) {
           serveurcard.innerHTML += createcardtoputinsignedcards(employee);
-          removemodalandaddemployeetothezone(employee)
-          return 
-         
-        
+          removemodalandaddemployeetothezone(employee);
+          return;
         }
-        if((employee.role == "sécurité" || employee.role == "Manager" || employee.role == "Nettoyage") &&  buttonsearchchecker == "id4") {
+        if (
+          (employee.role == "sécurité" ||
+            employee.role == "Manager" ||
+            employee.role == "Nettoyage") &&
+          buttonsearchchecker == "id4"
+        ) {
           securityCard.innerHTML += createcardtoputinsignedcards(employee);
-          removemodalandaddemployeetothezone(employee)
-          return 
+          removemodalandaddemployeetothezone(employee);
+          return;
         }
-        if (employee.role == "Autre" &&  buttonsearchchecker != "id6") {
-             cardsContainerInsideZone.parentElement.innerHTML += createcardtoputinsignedcards(employee);
-          removemodalandaddemployeetothezone(employee)
-          return
+        if (employee.role == "Autre" && buttonsearchchecker != "id6") {
+          cardsContainerInsideZone.parentElement.innerHTML +=
+            createcardtoputinsignedcards(employee);
+          removemodalandaddemployeetothezone(employee);
+          return;
         }
         if (employee.role != "Autre" && buttonsearchchecker == "id6") {
-          cardsContainerInsideZone.parentElement.innerHTML += createcardtoputinsignedcards(employee);
-          removemodalandaddemployeetothezone(employee)
-          return
+          cardsContainerInsideZone.parentElement.innerHTML +=
+            createcardtoputinsignedcards(employee);
+          removemodalandaddemployeetothezone(employee);
+          return;
         }
-        
-         
-        }
-        
-        
-      })
-    };
-    
-    
+      }
+    });
   }
-function removemodalandaddemployeetothezone(employee) {
-        modalPourSearchEmployee.style.display = "none";
-        unsnighedCards.splice(unsnighedCards.indexOf(employee), 1)
-        afficherlescard();
 }
-
+function removemodalandaddemployeetothezone(employee) {
+  modalPourSearchEmployee.style.display = "none";
+  unsnighedCards.splice(unsnighedCards.indexOf(employee), 1);
+  afficherlescard();
+}
 function createcardtoputinsignedcards(employee) {
   const employeeCard = `
      <div class="mini-card">
@@ -253,7 +358,6 @@ function createcardtoputinsignedcards(employee) {
     `;
   return employeeCard;
 }
-      
 function showunshinedemployees(employeesName) {
   const cardsShownAfterShow = unsnighedCards.filter((ele) =>
     ele.name.includes(employeesName)
@@ -268,7 +372,6 @@ function showunshinedemployees(employeesName) {
     `;
   });
 }
-
 function displayexperience() {
   if (checkExperienceinputs()) {
     const experienceCard = {
@@ -286,7 +389,6 @@ function displayexperience() {
     renderExperience();
   }
 }
-
 function renderExperience() {
   experienceContainer.innerHTML = "";
   ExperienceArray.forEach((exp) => {
@@ -298,7 +400,6 @@ function renderExperience() {
     `;
   });
 }
-
 function remooveexperience(button) {
   ExperienceArray.forEach((experience) => {
     if (button.getAttribute("data-experience-id") == experience.id) {
@@ -308,14 +409,12 @@ function remooveexperience(button) {
   });
   console.log(ExperienceArray);
 }
-
 function hideSideBar() {
   sideBar.style.display = "none";
   hideside.style.display = "none";
   showside.style.display = "block";
   showside.style.height = "100vh";
 }
-
 function showSideBar() {
   document.getElementById("cont").style.zIndex = "1";
   sideBar.style.zIndex = "1";
@@ -324,7 +423,6 @@ function showSideBar() {
   hideside.style.display = "block";
   showside.style.display = "none";
 }
-
 function showModal() {
   showMoodal.style.display = "flex";
 }
@@ -363,7 +461,6 @@ function AjouterEmployee() {
     imgContainer.innerHTML = "";
   }
 }
-
 function afficherlescard() {
   profileCardContainer.innerText = "";
   unsnighedCards.forEach((employee) => {
@@ -376,9 +473,17 @@ function afficherlescard() {
         </div>
         <div class="buttons">
           <button class="delete" id="deleteButton" dataId="${employee.id}">×</button>
+          <button class="detail" id="${employee.id}">👤 </button>
         </div>
       </div>
      `;
+  });
+  console.log(unsnighedCards);
+  const detailsEmployee = document.querySelectorAll(".detail");
+  detailsEmployee.forEach((detailbutton) => {
+    detailbutton.addEventListener("click", () => {
+      showDetailModalwithvalues(detailbutton.id);
+    });
   });
 
   const deleteButtons = document.querySelectorAll("#deleteButton");
@@ -423,4 +528,63 @@ function checkExperienceinputs() {
     }
   }
   return true;
+}
+var modalcontainer;
+function showdDetailsOfTheEmployee(emp) {
+  var theExpereiencesOTheClickedEmployee =
+    emp.experience.length > 0
+      ? Array.from(emp.experience)
+          .map(
+            (exp) =>
+              `
+    <li>
+      <p><strong>Company:</strong> ${exp.company} </p>
+      <p><strong>Role:</strong> ${exp.roleE} </p>
+      <p><strong>From:</strong> ${exp.startDate}</p>
+      <p><strong>To:</strong> ${exp.enddate}</p>
+    </li>
+    `
+          )
+          .join("")
+      : `<p>No Experience</p>`;
+
+  conferenceCard.innerHTML += `
+  <div id="modalbg" class="modal-bg">
+  <div class="modal-box">
+    
+    <button class="close-btn" id="closeModaldetail">✖</button>
+
+    <img src="${emp.img}" class="profile-pic" />
+
+    <div class="info">
+      <p><strong>Name:</strong> ${emp.name}</p>
+      <p><strong>Role:</strong> ${emp.role}</p>
+      <p><strong>Experience:</strong> ${emp.experience.length} Experiences </p>
+    </div>
+
+    <div class="company">
+      
+      <ul id="lesexperiencedetails"> 
+       
+     ${theExpereiencesOTheClickedEmployee}
+      </ul>
+    </div>
+
+  </div>
+</div>
+  `;
+  let closeModaldetail = document.getElementById("closeModaldetail");
+  modalcontainer = document.getElementById("modalbg");
+  closeModaldetail.addEventListener("click", removeModalDetail);
+}
+
+function showDetailModalwithvalues(ID) {
+  const clickedButton = unsnighedCards.find((e) => e.id == ID);
+  console.log(clickedButton);
+
+  showdDetailsOfTheEmployee(clickedButton);
+}
+
+function removeModalDetail() {
+  modalcontainer.remove();
 }
