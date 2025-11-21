@@ -24,6 +24,7 @@ const experienceContainer = document.getElementById("cardofexperience");
 const companyName = document.getElementById("companyname");
 
 const conferenceNumber = document.getElementById("conferencenombre");
+const receptionNombre = document.getElementById("receptionnombre");
 var buttonsearchchecker;
 
 const conferenceCard = document.getElementById("cont1");
@@ -147,7 +148,7 @@ afficherlescard();
 // conferenceCard.addEventListener("click" , (e) => {
 
 // })
-
+var cardsContainerInsideZone
 searchInput.addEventListener("input", () => {
   if (searchInput.value !== "") {
     showunshinedemployees(searchInput.value);
@@ -159,7 +160,7 @@ searchInput.addEventListener("input", () => {
 butotonDeAjouterdanslessalle.forEach((button) => {
   button.addEventListener("click", () => {
     buttonsearchchecker = button.id;
-    
+    cardsContainerInsideZone = button
     showSearchModal();
   });
 });
@@ -184,51 +185,62 @@ imgUrl.addEventListener("input", () => {
 });
 
 searchDivContainer.addEventListener("click", (e) => {
-  addemployeetoacard(e.target);
+  addemployeetoacard(e.target );
 });
 var i = 0;
 function addemployeetoacard(targetButton) {
   if (targetButton.className == "confirm") {
     unsnighedCards.forEach((employee) => {
-      if (employee.id == targetButton.id) {
-        if(buttonsearchchecker == "id1") {
-             conferenceCard.innerHTML += createcardtoputinsignedcards(employee);
+      if (employee.id == targetButton.id ) {
+        if((buttonsearchchecker =="id1" || buttonsearchchecker =="id5") && i < 8  ) {
+             cardsContainerInsideZone.parentElement.innerHTML += createcardtoputinsignedcards(employee);
+             removemodalandaddemployeetothezone(employee)
+            
+             return  
         }
-        if (employee.role == "Réceptionnist" || employee.role == "Nettoyage" || employee.role == "Manager" && buttonsearchchecker == "id2") {
+        if ((employee.role == "Réceptionnist" || employee.role == "Nettoyage" || employee.role == "Manager") && buttonsearchchecker == "id2" ) {
           receptioncard.innerHTML += createcardtoputinsignedcards(employee);
-          // conferenceNumber.innerHTML = ++i;
+          removemodalandaddemployeetothezone(employee)
+          receptionNombre.innerText += 1 
           
+          return 
         }
-        if(employee.role == "Techniciens IT" || employee.role == "Nettoyage" ||   employee.role == "Manager"  && buttonsearchchecker == "id3") {
+        if((employee.role == "Techniciens IT" || employee.role == "Nettoyage" ||   employee.role == "Manager")  && buttonsearchchecker == "id3") {
           serveurcard.innerHTML += createcardtoputinsignedcards(employee);
-          // unsnighedCards.splice(unsnighedCards.indexOf(employee), 1);
-          // conferenceNumber.innerHTML = ++i;
+          removemodalandaddemployeetothezone(employee)
+          return 
+         
         
         }
-        if(employee.role == "sécurité" || employee.role == "Manager" || employee.role == "Nettoyage" &&  buttonsearchchecker == "id4") {
+        if((employee.role == "sécurité" || employee.role == "Manager" || employee.role == "Nettoyage") &&  buttonsearchchecker == "id4") {
           securityCard.innerHTML += createcardtoputinsignedcards(employee);
-          
-          // unsnighedCards.splice(unsnighedCards.indexOf(employee), 1);
-          // conferenceNumber.innerHTML = ++i;
-        
+          removemodalandaddemployeetothezone(employee)
+          return 
+        }
+        if (employee.role == "Autre" &&  buttonsearchchecker != "id6") {
+             cardsContainerInsideZone.parentElement.innerHTML += createcardtoputinsignedcards(employee);
+          removemodalandaddemployeetothezone(employee)
+          return
+        }
+        if (employee.role != "Autre" && buttonsearchchecker == "id6") {
+          cardsContainerInsideZone.parentElement.innerHTML += createcardtoputinsignedcards(employee);
+          removemodalandaddemployeetothezone(employee)
+          return
         }
         
          
         }
-        if(employee.role == "Autre" && buttonsearchchecker !== "id6" || buttonsearchchecker !== "id2" || buttonsearchchecker !== "id3" || buttonsearchchecker !== "id4") {
-          securityCard.innerHTML += createcardtoputinsignedcards(employee);
-          // unsnighedCards.splice(unsnighedCards.indexOf(employee), 1);
-        }
         
         
-        modalPourSearchEmployee.style.display = "none";
-        unsnighedCards.splice(unsnighedCards.indexOf(employee), 1);
-        afficherlescard();
-      }
-    });
-    // conferenceNumber.innerHTML = ++i;
+      })
+    };
+    
     
   }
+function removemodalandaddemployeetothezone(employee) {
+        modalPourSearchEmployee.style.display = "none";
+        unsnighedCards.splice(unsnighedCards.indexOf(employee), 1)
+        afficherlescard();
 }
 
 function createcardtoputinsignedcards(employee) {
@@ -241,7 +253,7 @@ function createcardtoputinsignedcards(employee) {
     `;
   return employeeCard;
 }
-
+      
 function showunshinedemployees(employeesName) {
   const cardsShownAfterShow = unsnighedCards.filter((ele) =>
     ele.name.includes(employeesName)

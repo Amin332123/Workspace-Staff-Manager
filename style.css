@@ -405,6 +405,7 @@ h5 {
   font-size: 12px;
   margin-top: 4px;
   background: #fff;
+  margin-left: 5px;
 }
 
 .mini-pic {
@@ -439,6 +440,8 @@ h5 {
 h4 {
 
   color: white;
+  text-align : center ;
+
 }
 
 
